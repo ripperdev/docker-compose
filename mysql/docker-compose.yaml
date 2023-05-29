@@ -1,0 +1,25 @@
+version: '3'
+
+networks:
+  mysql-net:
+    driver: bridge
+
+volumes:
+  data:
+
+services:
+  mysql:
+    image: mysql:8.0.33
+    container_name: mysql8
+    restart: always
+    networks:
+      - mysql-net
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    volumes:
+      - $PWD/data:/var/lib/mysql
+      - $PWD/my.cnf:/etc/my.cnf
+      - /etc/localtime:/etc/localtime
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
