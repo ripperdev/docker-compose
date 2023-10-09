@@ -1,8 +1,8 @@
 version: "3.1"
 services:
   postgreis:
-    image: postgres:15.4
-    container_name: postgres15
+    image: postgres:16
+    container_name: postgres16
     restart: always
     environment:
       POSTGRES_PASSWORD: 123456
