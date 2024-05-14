@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   postgreis:
-    image: postgres:16
+    image: postgres:16.3
     container_name: postgres16
     restart: always
     environment:

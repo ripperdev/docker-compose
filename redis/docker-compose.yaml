@@ -9,7 +9,7 @@ volumes:
 
 services:
   redis:
-    image: redis:7.2.0
+    image: redis:7.2.4
     restart: always
     container_name: redis7
     networks:
